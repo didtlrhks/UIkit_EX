@@ -9,6 +9,7 @@ import UIKit
 
 class SecondAppMainViewController: UIViewController {
 
+    let diceimageNameData = ["one","two","three","four","five","sixs"]
     
     lazy var diceImageView : UIImageView = {
         let imageview = UIImageView(image: UIImage(named:"one"))
@@ -48,7 +49,7 @@ class SecondAppMainViewController: UIViewController {
         
     }
     @objc func didtabButtonChage() {
-        diceImageView.image = UIImage(named: "two")
+        diceImageView.image = UIImage(named: diceimageNameData.randomElement() ?? "one")
     }
 
 
