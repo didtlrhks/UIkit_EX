@@ -15,9 +15,22 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "양시관"
         label.textAlignment = .center
-        label.backgroundColor = .green
+        label.backgroundColor = .black
         
         return label
+        
+        
+        
+    }()
+    
+    lazy var chageButton : UIButton = {
+        
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.text = "양시관"
+        button.backgroundColor = .black
+        
+        return button
         
         
         
