@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "양시관"
         label.textAlignment = .center
-        label.backgroundColor = .black
+        
         
         return label
         
@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.text = "양시관"
-        button.backgroundColor = .black
+        button.setTitle("인사합시다.", for: .normal)
+        button.backgroundColor = .purple
         
         return button
         
@@ -47,6 +47,18 @@ class ViewController: UIViewController {
         myNametextLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         myNametextLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
+  
+        
+        view.addSubview(chageButton)
+        chageButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        chageButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        chageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        chageButton.topAnchor.constraint(equalTo: myNametextLabel.bottomAnchor,constant: 200).isActive = true
+        chageButton.addTarget(self, action: #selector(didtabButtonChage), for: .touchUpInside)
+    }
+    
+    @objc func didtabButtonChage() {
+        myNametextLabel.text = "안녕하세요"
     }
 
 
