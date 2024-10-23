@@ -16,11 +16,8 @@ class ViewController: UIViewController {
         label.text = "양시관"
         label.textAlignment = .center
         
-        
         return label
-        
-        
-        
+
     }()
     
     lazy var chageButton : UIButton = {
